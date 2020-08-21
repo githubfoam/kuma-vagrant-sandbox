@@ -12,8 +12,19 @@ if [ -z "${KUMA_CONTROL_PLANE_IP}" ]; then
   exit 1
 fi
 
+# echo "
+# ${KUMA_CONTROL_PLANE_IP} kuma-cp
+# " >> /etc/hosts
+
 echo "
 ${KUMA_CONTROL_PLANE_IP} kuma-cp
+${FRONTEND_IP} frontend
+${BACKEND_IP} backend
+${BACKEND_V1_IP} backend-v1
+${POSTGRESQL_IP} postgresql
+${REDIS_IP} redis
+${KONG_IP} kong
+${METRICS_IP} metrics
 " >> /etc/hosts
 
 echo "=======================update hosts finished=================================================================="

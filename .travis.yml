@@ -28,117 +28,117 @@ matrix:
         - sudo vagrant destroy -f # required to run Vagrantfile template        
         - sudo rm Vagrantfile # required to run Vagrantfile template          
 
-    # - name: "kuma demo w debian 10 Python 3.7 on bionic amd64"
-    #   dist: bionic
-    #   arch: amd64
-    #   language: python
-    #   python: 3.7
-    #   before_install:
-    #     - pip3 install virtualenv
-    #     - virtualenv -p $(which python3) ~venvpy3
-    #     - source ~venvpy3/bin/activate
-    #     - pip install -r requirements.txt
-    #   script:
-    #     - sudo make deploy-vagrant
-    #     - sudo make deploy-libvirt
-    #     - sudo make deploy-debian
-    #   after_success:
-    #     - deactivate
-    #     - sudo vagrant destroy -f # required to run Vagrantfile template        
-    #     - sudo rm Vagrantfile # required to run Vagrantfile template         
+    - name: "kuma demo w debian 10 Python 3.7 on bionic amd64"
+      dist: bionic
+      arch: amd64
+      language: python
+      python: 3.7
+      before_install:
+        - pip3 install virtualenv
+        - virtualenv -p $(which python3) ~venvpy3
+        - source ~venvpy3/bin/activate
+        - pip install -r requirements.txt
+      script:
+        - sudo make deploy-vagrant
+        - sudo make deploy-libvirt
+        - sudo make deploy-debian
+      after_success:
+        - deactivate
+        - sudo vagrant destroy -f # required to run Vagrantfile template        
+        - sudo rm Vagrantfile # required to run Vagrantfile template         
 
-    # - name: "kuma demo w centos 8 Python 3.7 on bionic amd64"
-    #   dist: bionic
-    #   arch: amd64
-    #   language: python
-    #   python: 3.7
-    #   before_install:
-    #     - pip3 install virtualenv
-    #     - virtualenv -p $(which python3) ~venvpy3
-    #     - source ~venvpy3/bin/activate
-    #     - pip install -r requirements.txt
-    #   script:
-    #     - sudo make deploy-vagrant
-    #     - sudo make deploy-libvirt
-    #     - sudo make deploy-debian
-    #   after_success:
-    #     - deactivate
-    #     - sudo vagrant destroy -f # required to run Vagrantfile template        
-    #     - sudo rm Vagrantfile # required to run Vagrantfile template                 
+    - name: "kuma demo w centos 8 Python 3.7 on bionic amd64"
+      dist: bionic
+      arch: amd64
+      language: python
+      python: 3.7
+      before_install:
+        - pip3 install virtualenv
+        - virtualenv -p $(which python3) ~venvpy3
+        - source ~venvpy3/bin/activate
+        - pip install -r requirements.txt
+      script:
+        - sudo make deploy-vagrant
+        - sudo make deploy-libvirt
+        - sudo make deploy-debian
+      after_success:
+        - deactivate
+        - sudo vagrant destroy -f # required to run Vagrantfile template        
+        - sudo rm Vagrantfile # required to run Vagrantfile template                 
 
 
-    # - name: "kuma demo w fedora 32 Python 3.7 on bionic amd64"
-    #   dist: bionic
-    #   arch: amd64
-    #   language: python
-    #   python: 3.7
-    #   before_install:
-    #     - pip3 install virtualenv
-    #     - virtualenv -p $(which python3) ~venvpy3
-    #     - source ~venvpy3/bin/activate
-    #     - pip install -r requirements.txt
-    #   script:
-    #     - sudo make deploy-vagrant
-    #     - sudo make deploy-libvirt
-    #     - sudo make deploy-fedora
-    #   after_success:
-    #     - deactivate
-    #     - sudo vagrant destroy -f # required to run Vagrantfile template        
-    #     - sudo rm Vagrantfile # required to run Vagrantfile template  
+    - name: "kuma demo w fedora 32 Python 3.7 on bionic amd64"
+      dist: bionic
+      arch: amd64
+      language: python
+      python: 3.7
+      before_install:
+        - pip3 install virtualenv
+        - virtualenv -p $(which python3) ~venvpy3
+        - source ~venvpy3/bin/activate
+        - pip install -r requirements.txt
+      script:
+        - sudo make deploy-vagrant
+        - sudo make deploy-libvirt
+        - sudo make deploy-fedora
+      after_success:
+        - deactivate
+        - sudo vagrant destroy -f # required to run Vagrantfile template        
+        - sudo rm Vagrantfile # required to run Vagrantfile template  
 
-    # - name: "kuma demo w opensuse leap 15.2 Python 3.7 on bionic amd64"
-    #   dist: bionic
-    #   arch: amd64
-    #   language: python
-    #   python: 3.7
-    #   before_install:
-    #     - pip3 install virtualenv
-    #     - virtualenv -p $(which python3) ~venvpy3
-    #     - source ~venvpy3/bin/activate
-    #     - pip install -r requirements.txt
-    #   script:
-    #     - sudo make deploy-vagrant
-    #     - sudo make deploy-libvirt
-    #     - sudo make deploy-opensuse
-    #   after_success:
-    #     - deactivate
-    #     - sudo vagrant destroy -f # required to run Vagrantfile template        
-    #     - sudo rm Vagrantfile # required to run Vagrantfile template  
+    - name: "kuma demo w opensuse leap 15.2 Python 3.7 on bionic amd64"
+      dist: bionic
+      arch: amd64
+      language: python
+      python: 3.7
+      before_install:
+        - pip3 install virtualenv
+        - virtualenv -p $(which python3) ~venvpy3
+        - source ~venvpy3/bin/activate
+        - pip install -r requirements.txt
+      script:
+        - sudo make deploy-vagrant
+        - sudo make deploy-libvirt
+        - sudo make deploy-opensuse
+      after_success:
+        - deactivate
+        - sudo vagrant destroy -f # required to run Vagrantfile template        
+        - sudo rm Vagrantfile # required to run Vagrantfile template  
 
-    # - name: "kuma demo w sles 15 sp1 Python 3.7 on bionic amd64"
-    #   dist: bionic
-    #   arch: amd64
-    #   language: python
-    #   python: 3.7
-    #   before_install:
-    #     - pip3 install virtualenv
-    #     - virtualenv -p $(which python3) ~venvpy3
-    #     - source ~venvpy3/bin/activate
-    #     - pip install -r requirements.txt
-    #   script:
-    #     - sudo make deploy-vagrant
-    #     - sudo make deploy-libvirt
-    #     - sudo make deploy-susesles
-    #   after_success:
-    #     - deactivate
-    #     - sudo vagrant destroy -f # required to run Vagrantfile template        
-    #     - sudo rm Vagrantfile # required to run Vagrantfile template          
+    - name: "kuma demo w sles 15 sp1 Python 3.7 on bionic amd64"
+      dist: bionic
+      arch: amd64
+      language: python
+      python: 3.7
+      before_install:
+        - pip3 install virtualenv
+        - virtualenv -p $(which python3) ~venvpy3
+        - source ~venvpy3/bin/activate
+        - pip install -r requirements.txt
+      script:
+        - sudo make deploy-vagrant
+        - sudo make deploy-libvirt
+        - sudo make deploy-susesles
+      after_success:
+        - deactivate
+        - sudo vagrant destroy -f # required to run Vagrantfile template        
+        - sudo rm Vagrantfile # required to run Vagrantfile template          
 
-    # - name: "kuma demo w archlinux Python 3.7 on bionic amd64"
-    #   dist: bionic
-    #   arch: amd64
-    #   language: python
-    #   python: 3.7
-    #   before_install:
-    #     - pip3 install virtualenv
-    #     - virtualenv -p $(which python3) ~venvpy3
-    #     - source ~venvpy3/bin/activate
-    #     - pip install -r requirements.txt
-    #   script:
-    #     - sudo make deploy-vagrant
-    #     - sudo make deploy-libvirt
-    #     - sudo make deploy-archlinux
-    #   after_success:
-    #     - deactivate
-    #     - sudo vagrant destroy -f # required to run Vagrantfile template        
-    #     - sudo rm Vagrantfile # required to run Vagrantfile template                  
+    - name: "kuma demo w archlinux Python 3.7 on bionic amd64"
+      dist: bionic
+      arch: amd64
+      language: python
+      python: 3.7
+      before_install:
+        - pip3 install virtualenv
+        - virtualenv -p $(which python3) ~venvpy3
+        - source ~venvpy3/bin/activate
+        - pip install -r requirements.txt
+      script:
+        - sudo make deploy-vagrant
+        - sudo make deploy-libvirt
+        - sudo make deploy-archlinux
+      after_success:
+        - deactivate
+        - sudo vagrant destroy -f # required to run Vagrantfile template        
+        - sudo rm Vagrantfile # required to run Vagrantfile template                  
