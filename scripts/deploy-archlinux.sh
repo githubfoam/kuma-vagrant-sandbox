@@ -80,7 +80,7 @@ vagrant box add "archlinux/archlinux" --provider=libvirt
 vagrant init --template Vagrantfile.provision.bash.arch.erb
 # must be created in project root directory with Vagrantfile template file
 vagrant up --provider=libvirt "kuma-control-plane"
-vagrant up --provider=libvirt "redis"
+# vagrant up --provider=libvirt "redis"
 
 vagrant box list #veridy installed boxes
 vagrant status #Check the status of the VMs to see that none of them have been created yet

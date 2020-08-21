@@ -56,7 +56,7 @@ vagrant box add "centos/8" --provider=libvirt
 vagrant init --template Vagrantfile.provision.bash.centos.erb 
 # must be created in project root directory with Vagrantfile template file
 vagrant up --provider=libvirt "kuma-control-plane"
-vagrant up --provider=libvirt "redis"
+# vagrant up --provider=libvirt "redis"
 
 # https://app.vagrantup.com/debian/boxes/buster64 debian 10
 # vagrant box add "debian/buster64" --provider=libvirt

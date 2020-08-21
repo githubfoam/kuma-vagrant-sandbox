@@ -73,7 +73,7 @@ vagrant mutate "opensuse-leap-15.2"  libvirt
 vagrant init --template Vagrantfile.provision.bash.opensuse.erb
 # must be created in project root directory with Vagrantfile template file
 vagrant up --provider=libvirt "kuma-control-plane"
-vagrant up --provider=libvirt "redis"
+# vagrant up --provider=libvirt "redis"
 
 # vagrant ssh "vg-compute-05" -c "sudo blazescan -h"
 

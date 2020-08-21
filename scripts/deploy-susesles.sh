@@ -73,7 +73,7 @@ vagrant mutate "bento/sles-15-sp1"  libvirt
 vagrant init --template Vagrantfile.provision.bash.susesles.erb
 # must be created in project root directory with Vagrantfile template file
 vagrant up --provider=libvirt "kuma-control-plane"
-vagrant up --provider=libvirt "redis"
+# vagrant up --provider=libvirt "redis"
 
 # vagrant ssh "vg-compute-05" -c "sudo blazescan -h"
 

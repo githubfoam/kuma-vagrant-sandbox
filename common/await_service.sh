@@ -6,8 +6,8 @@ set -o xtrace
 # set -eox pipefail #safety for script
 
 echo "===================waiting for service======================================================================"
-export SERVICE_URL="http://localhost:5681"
-echo $SERVICE_URL
+# export SERVICE_URL="http://localhost:5681"
+# echo $SERVICE_URL
 
 if [ -z "${SERVICE_URL}" ]; then
   echo "Error: environment variable SERVICE_URL is not set"

@@ -59,7 +59,7 @@ vagrant mutate "bento/fedora-32" libvirt
 vagrant init --template Vagrantfile.provision.bash.suse.erb
 # must be created in project root directory with Vagrantfile template file
 vagrant up --provider=libvirt "kuma-control-plane"
-vagrant up --provider=libvirt "redis"
+# vagrant up --provider=libvirt "redis"
 
 # # https://app.vagrantup.com/centos/boxes/8 # Ansible provision OK
 # vagrant box add "centos/8" --provider=libvirt
