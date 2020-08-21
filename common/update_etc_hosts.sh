@@ -6,6 +6,14 @@ set -o xtrace
 # set -eox pipefail #safety for script
 
 echo "======================update hosts==================================================================="
+KUMA_CONTROL_PLANE_IP      = "192.168.33.10"
+FRONTEND_IP                = "192.168.33.20"
+BACKEND_IP                 = "192.168.33.30"
+BACKEND_V1_IP              = "192.168.33.40"
+POSTGRESQL_IP              = "192.168.33.50"
+REDIS_IP                   = "192.168.33.60"
+KONG_IP                    = "192.168.33.70"
+METRICS_IP                 = "192.168.33.80"
 
 if [ -z "${KUMA_CONTROL_PLANE_IP}" ]; then
   echo "Error: environment variable KUMA_CONTROL_PLANE_IP is not set"
@@ -26,6 +34,8 @@ ${REDIS_IP} redis
 ${KONG_IP} kong
 ${METRICS_IP} metrics
 " >> /etc/hosts
+
+cat /etc/hosts #verify hosts
 
 echo "=======================update hosts finished=================================================================="
 
