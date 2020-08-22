@@ -82,7 +82,7 @@ vagrant plugin install vagrant-mutate #Convert vagrant boxes to work with differ
 # vagrant up --provider=libvirt "kuma-control-plane"
 # vagrant up --provider=libvirt "redis"
 
-https://app.vagrantup.com/generic/boxes/openbsd6
+# https://app.vagrantup.com/generic/boxes/openbsd6
 vagrant box add "generic/openbsd6" --provider=libvirt
 vagrant init --template Vagrantfile.provision.bash.openbsd.erb
 vagrant up --provider=libvirt "vg-openbsd-02"
