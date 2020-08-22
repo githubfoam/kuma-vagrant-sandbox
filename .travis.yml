@@ -9,24 +9,24 @@ matrix:
   include:
 
     
-    - name: "kuma demo w ubuntu 20.10 Python 3.7 on bionic amd64"
-      dist: bionic
-      arch: amd64
-      language: python
-      python: 3.7
-      before_install:
-        - pip3 install virtualenv
-        - virtualenv -p $(which python3) ~venvpy3
-        - source ~venvpy3/bin/activate
-        - pip install -r requirements.txt
-      script:
-        - sudo make deploy-vagrant
-        - sudo make deploy-libvirt
-        - sudo make deploy-ubuntu
-      after_success:
-        - deactivate
-        - sudo vagrant destroy -f # required to run Vagrantfile template        
-        - sudo rm Vagrantfile # required to run Vagrantfile template          
+    # - name: "kuma demo w ubuntu 20.10 Python 3.7 on bionic amd64"
+    #   dist: bionic
+    #   arch: amd64
+    #   language: python
+    #   python: 3.7
+    #   before_install:
+    #     - pip3 install virtualenv
+    #     - virtualenv -p $(which python3) ~venvpy3
+    #     - source ~venvpy3/bin/activate
+    #     - pip install -r requirements.txt
+    #   script:
+    #     - sudo make deploy-vagrant
+    #     - sudo make deploy-libvirt
+    #     - sudo make deploy-ubuntu
+    #   after_success:
+    #     - deactivate
+    #     - sudo vagrant destroy -f # required to run Vagrantfile template        
+    #     - sudo rm Vagrantfile # required to run Vagrantfile template          
 
     - name: "kuma demo w debian 10 Python 3.7 on bionic amd64"
       dist: bionic
@@ -60,7 +60,7 @@ matrix:
       script:
         - sudo make deploy-vagrant
         - sudo make deploy-libvirt
-        - sudo make deploy-debian
+        - sudo make deploy-centos
       after_success:
         - deactivate
         - sudo vagrant destroy -f # required to run Vagrantfile template        
