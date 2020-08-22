@@ -28,8 +28,9 @@ Vagrant.configure("2") do |config|
     node.vm.provision "download_kuma", type: "shell", path: "common/download_kuma.sh", env: {"KUMA_VERSION" => KUMA_VERSION, "KUMA_HOME" => KUMA_HOME }
     node.vm.provision "create_tls_cert", type: "shell", path: "control-plane/kuma/create_tls_cert.sh"
     node.vm.provision "install_kuma-cp", type: "shell", path: "control-plane/kuma/install_kuma-cp.sh"
-    node.vm.provision "await_kuma-cp", type: "shell", path: "common/await_service.sh", env: {"SERVICE_URL" => "http://localhost:5681"}, privileged: false, run: "always"
-    node.vm.provision "create_dp_tokens", type: "shell", path: "control-plane/kuma/create_dp_tokens.sh", run: "always"
+    #curl: (7) Failed to connect to localhost port 5681: Connection refused
+    #node.vm.provision "await_kuma-cp", type: "shell", path: "common/await_service.sh", env: {"SERVICE_URL" => "http://localhost:5681"}, privileged: false, run: "always"
+    #node.vm.provision "create_dp_tokens", type: "shell", path: "control-plane/kuma/create_dp_tokens.sh", run: "always"
   end
 
   config.vm.define "redis" do |node|

@@ -68,11 +68,12 @@ vagrant plugin install vagrant-mutate #Convert vagrant boxes to work with differ
 # vagrant up --provider=libvirt "vg-compute-10"
 
 # # https://github.com/chef/bento/tree/master/packer_templates/opensuse
-vagrant box add  "opensuse-leap-15.2" --provider=virtualbox
-vagrant mutate "opensuse-leap-15.2"  libvirt
-vagrant init --template Vagrantfile.provision.bash.opensuse.erb
-# must be created in project root directory with Vagrantfile template file
-vagrant up --provider=libvirt "kuma-control-plane"
+# ==> box: Box file was not detected as metadata. Adding it directly..
+# vagrant box add  "opensuse-leap-15.2" --provider=virtualbox
+# vagrant mutate "opensuse-leap-15.2"  libvirt
+# vagrant init --template Vagrantfile.provision.bash.opensuse.erb
+# # must be created in project root directory with Vagrantfile template file
+# vagrant up --provider=libvirt "kuma-control-plane"
 # vagrant up --provider=libvirt "redis"
 
 # vagrant ssh "vg-compute-05" -c "sudo blazescan -h"

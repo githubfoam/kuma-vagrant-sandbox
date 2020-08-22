@@ -68,11 +68,12 @@ vagrant plugin install vagrant-mutate #Convert vagrant boxes to work with differ
 # vagrant up --provider=libvirt "vg-compute-10"
 
 # # https://github.com/chef/bento/tree/master/packer_templates/sles
-vagrant box add  "bento/sles-15-sp1" --provider=virtualbox
-vagrant mutate "bento/sles-15-sp1"  libvirt
-vagrant init --template Vagrantfile.provision.bash.susesles.erb
+# The box 'bento/sles-15-sp1' could not be found or
+# vagrant box add  "bento/sles-15-sp1" --provider=virtualbox
+# vagrant mutate "bento/sles-15-sp1"  libvirt
+# vagrant init --template Vagrantfile.provision.bash.susesles.erb
 # must be created in project root directory with Vagrantfile template file
-vagrant up --provider=libvirt "kuma-control-plane"
+# vagrant up --provider=libvirt "kuma-control-plane"
 # vagrant up --provider=libvirt "redis"
 
 # vagrant ssh "vg-compute-05" -c "sudo blazescan -h"
