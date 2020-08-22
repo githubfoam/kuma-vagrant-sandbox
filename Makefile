@@ -1,6 +1,15 @@
 IMAGE := alpine/fio
 APP:="app/deploy-openesb.sh"
 
+deploy-netbsd:
+	bash scripts/deploy-netbsd.sh
+
+deploy-openbsd:
+	bash scripts/deploy-openbsd.sh
+
+deploy-freebsd:
+	bash scripts/deploy-freebsd.sh
+
 deploy-archlinux:
 	bash scripts/deploy-archlinux.sh
 

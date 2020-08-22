@@ -82,11 +82,10 @@ vagrant plugin install vagrant-mutate #Convert vagrant boxes to work with differ
 # vagrant up --provider=libvirt "kuma-control-plane"
 # vagrant up --provider=libvirt "redis"
 
-# https://app.vagrantup.com/freebsd/boxes/FreeBSD-12.1-STABLE
-vagrant box add "freebsd/FreeBSD-12.1-STABLE" --provider=virtualbox
-vagrant mutate "freebsd/FreeBSD-12.1-STABLE" libvirt
-vagrant init --template Vagrantfile.provision.bash.freebsd.erb
-vagrant up --provider=libvirt "vg-freebsd-02"
+https://app.vagrantup.com/generic/boxes/openbsd6
+vagrant box add "generic/openbsd6" --provider=libvirt
+vagrant init --template Vagrantfile.provision.bash.openbsd.erb
+vagrant up --provider=libvirt "vg-openbsd-02"
 # vagrant ssh vgnode04 -c "hostnamectl"
 
 vagrant box list #veridy installed boxes
