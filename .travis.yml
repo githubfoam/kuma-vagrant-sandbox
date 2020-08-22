@@ -100,7 +100,7 @@ matrix:
       script:
         - sudo make deploy-vagrant
         - sudo make deploy-libvirt
-        - sudo make deploy-opensuse
+        # - sudo make deploy-opensuse
       after_success:
         - deactivate
         - sudo vagrant destroy -f # required to run Vagrantfile template        
@@ -120,7 +120,7 @@ matrix:
       script:
         - sudo make deploy-vagrant
         - sudo make deploy-libvirt
-        - sudo make deploy-susesles
+        # - sudo make deploy-susesles
       after_success:
         - deactivate
         - sudo vagrant destroy -f # required to run Vagrantfile template        
@@ -144,3 +144,22 @@ matrix:
         - deactivate
         - sudo vagrant destroy -f # required to run Vagrantfile template        
         - sudo rm Vagrantfile # required to run Vagrantfile template                  
+
+    - name: "openvpn w freebsd Python 3.7 on bionic amd64"
+      dist: bionic
+      arch: amd64
+      language: python
+      python: 3.7
+      before_install:
+        - pip3 install virtualenv
+        - virtualenv -p $(which python3) ~venvpy3
+        - source ~venvpy3/bin/activate
+        - pip install -r requirements.txt
+      script:
+        - sudo make deploy-vagrant
+        - sudo make deploy-libvirt
+        - sudo make deploy-freebsd
+      after_success:
+        - deactivate
+        - sudo vagrant destroy -f # required to run Vagrantfile template        
+        - sudo rm Vagrantfile # required to run Vagrantfile template                          
