@@ -6,6 +6,8 @@ set -o xtrace
 # set -eox pipefail #safety for script
 
 echo "===================waiting for service======================================================================"
+
+#curl --silent --show-error --fail http://KUMA_CONTROL_PLANE_IP:5681 # error
 # export SERVICE_URL="http://localhost:5681"
 # echo $SERVICE_URL
 
