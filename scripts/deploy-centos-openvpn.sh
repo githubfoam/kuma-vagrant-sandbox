@@ -8,9 +8,7 @@ set -o xtrace
 echo "===========deploy openvpn================="
 
 echo "Preparing OpenVPN 2 build environment"
-yum -y install lzo-devel openssl-devel \
-            pam-devel pkcs11-helper-devel gnutls-devel \ 
-            autoconf libtool make cmake git net-tools
+yum -y install lzo-devel openssl-devel pam-devel pkcs11-helper-devel gnutls-devel autoconf libtool make cmake git net-tools
 
 echo "Preparing OpenVPN 3 build enviroment"
 yum install -y epel-release
