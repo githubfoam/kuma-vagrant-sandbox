@@ -110,8 +110,8 @@ rm Vagrantfile
 # vagrant ssh vgnode04 -c "hostnamectl"
 
 vagrant box list #veridy installed boxes
-vagrant status #Check the status of the VMs to see that none of them have been created yet
-# vagrant status #A Vagrant environment or target machine is required to run this
+#A Vagrant environment or target machine is required to run this
+# vagrant status #Check the status of the VMs to see that none of them have been created yet
 virsh list --all #show all running KVM/libvirt VMs
 # vagrant destroy -f "vg-compute-05"
 
