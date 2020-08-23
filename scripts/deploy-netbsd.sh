@@ -91,6 +91,8 @@ vagrant plugin install vagrant-mutate #Convert vagrant boxes to work with differ
 vagrant box add "generic/netbsd9" --provider=virtualbox
 vagrant init --template Vagrantfile.provision.bash.netbsd.erb
 vagrant up --provider=libvirt "vg-netbsd-03"
+vagrant destroy -f
+rm Vagrantfile
 
 # https://app.vagrantup.com/NetBSD/boxes/NetBSD-8.0
 # vagrant box add "NetBSD/NetBSD-7.0" --provider=virtualbox
@@ -103,6 +105,8 @@ vagrant box add "NetBSD/NetBSD-8.0" --provider=virtualbox
 vagrant mutate "NetBSD/NetBSD-8.0" libvirt
 vagrant init --template Vagrantfile.provision.bash.netbsd.erb
 vagrant up --provider=libvirt "vg-netbsd-02"
+vagrant destroy -f
+rm Vagrantfile
 # vagrant ssh vgnode04 -c "hostnamectl"
 
 vagrant box list #veridy installed boxes
