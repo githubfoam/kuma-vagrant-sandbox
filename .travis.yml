@@ -203,7 +203,7 @@ matrix:
         - sudo vagrant destroy -f # required to run Vagrantfile template        
         - sudo rm Vagrantfile # required to run Vagrantfile template                                  
 
-    - name: "openvpn w centos8 Python 3.7 on bionic amd64"
+    - name: "openvpn w centos Python 3.7 on bionic amd64"
       dist: bionic
       arch: amd64
       language: python

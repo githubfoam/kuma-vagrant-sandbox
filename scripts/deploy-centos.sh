@@ -59,7 +59,7 @@ vagrant init --template Vagrantfile.provision.bash.centos.erb
 # vagrant up --provider=libvirt "kuma-control-plane"
 # vagrant up --provider=libvirt "redis"
 
-vagrant up --provider=libvirt "vg-centos-01"
+# vagrant up --provider=libvirt "vg-centos-01"
 vagrant up --provider=libvirt "vg-centos-02"
 
 # https://app.vagrantup.com/debian/boxes/buster64 debian 10
