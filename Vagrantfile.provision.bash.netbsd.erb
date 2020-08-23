@@ -40,7 +40,7 @@ Vagrant.configure(2) do |config|
              config.vm.define "vg-netbsd-02" do |k8scluster|
                 k8scluster.vm.box = "NetBSD/NetBSD-8.0"
                 k8scluster.vm.hostname = "vg-netbsd-02"
-                k8scluster.vm.network "private_network", ip: "192.168.50.15"
+                <%# k8scluster.vm.network "private_network", ip: "192.168.50.15" %>
                 #Disabling the default /vagrant share can be done as follows:
                 k8scluster.vm.synced_folder ".", "/vagrant", disabled: true
                 k8scluster.vm.provider "virtualbox" do |vb|

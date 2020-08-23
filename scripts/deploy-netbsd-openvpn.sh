@@ -6,7 +6,6 @@ set -o xtrace
 # set -eox pipefail #safety for script
 
 echo "===========deploy openvpn================="
-pkg update
 
 echo "Preparing OpenVPN build environment"
 echo "installing packages... this will take a while if your network is slow"
