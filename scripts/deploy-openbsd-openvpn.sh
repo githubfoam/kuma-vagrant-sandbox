@@ -6,7 +6,6 @@
 # set -eox pipefail #safety for script
 
 echo "===========deploy openvpn================="
-pkg update
 
 echo "Preparing OpenVPN build environment"
 pkg_add -I sudo-- git autoconf-2.69p2 automake-1.15.1 fping lzo2 lz4 libtool mbedtls cmake
